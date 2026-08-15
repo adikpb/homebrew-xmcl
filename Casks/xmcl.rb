@@ -1,31 +1,26 @@
 cask "xmcl" do
-  version "0.54.4"
+  arch arm: "arm64", intel: "x64"
+
+  version "0.66.2"
   sha256 :no_check
-  arch arm: "arm64", intel: "x86_64"
 
-  on_arm do 
-    url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.4/xmcl-0.54.4-arm64.dmg"
-  end
-
-  on_intel do
-    url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v0.54.4/xmcl-0.54.4-x64.dmg"
-  end
-
+  url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v#{version}/xmcl-#{version}-#{arch}.dmg"
   name "X Minecraft Launcher"
-  desc "An Open Source Minecraft Launcher with Modern UX. Provides a Disk Efficient way to manage all your Mods!"
+  desc "Open source Minecraft launcher with mod, modpack, and resource management"
   homepage "https://xmcl.app"
 
   livecheck do
     url :url
-    strategy :header_match
   end
-  
+
+  auto_updates true
+  depends_on macos: ">= :monterey"
+
   app "X Minecraft Launcher.app"
 
   zap trash: [
-    "~/Applications/X Minecraft Launcher.app",
     "~/Library/Application Support/xmcl",
     "~/Library/Preferences/xmcl.plist",
-    "~/Library/Saved Application State/xmcl.savedState"
+    "~/Library/Saved Application State/xmcl.savedState",
   ]
 end
