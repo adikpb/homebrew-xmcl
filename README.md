@@ -5,8 +5,7 @@ Launcher](https://github.com/Voxelum/x-minecraft-launcher)
 
 Tap and install
 ```sh
-brew tap adikpb/xmcl
-brew install --cask adikpb/xmcl
+brew install adikpb/xmcl/xmcl
 ```
 
 > [!NOTE]
