@@ -1,7 +1,7 @@
 cask "xmcl" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.71"
+  version "0.71.0"
   sha256 :no_check
 
   url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v#{version}/xmcl-#{version}-#{arch}.dmg"
