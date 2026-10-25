@@ -10,4 +10,4 @@ brew install adikpb/xmcl/xmcl
 
 > [!NOTE]
 >  Since the app bundle is not signed yet, you will have to disable quarantine.  
-> `sudo xattr -rd com.apple.quarantine XMCL.app` 
+> `sudo xattr -rd com.apple.quarantine /Applications/XMCL.app` 
