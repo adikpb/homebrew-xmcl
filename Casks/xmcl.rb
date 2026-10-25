@@ -16,7 +16,7 @@ cask "xmcl" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "X Minecraft Launcher.app"
+  app "XMCL.app"
 
   zap trash: [
     "~/Library/Application Support/xmcl",
